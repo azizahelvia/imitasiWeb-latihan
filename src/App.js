@@ -108,12 +108,21 @@ function NewClasses(){
   const KelasBaru = (props) => {
     return(
       <div className="box-kelasbaru text-lg-left text-xl-left" style={{marginTop: '3rem'}}>
-        <Card style={{ width: '15rem', height: '10rem', display: 'flex'}}>
+        <Card style={{ 
+          width: '15rem', 
+          height: '30rem', 
+          display: 'flex'}}>
           <Card.Img variant="top" src={props.image} />
             <Card.Body>
               <Card.Title>{props.title}</Card.Title>
-              <p className="text-muted mb-0" style={{textAlign: 'left', width: '5rem'}}>{props.modul}</p>
-              <p className="text-muted mb-0" style={{textAlign: 'right', marginLeft: '8rem'}}>{props.siswa}</p>
+              <Row>
+                <Col>
+                <p className="text-muted mb-0" style={{textAlign: 'left', width: '85%'}}>{props.modul}</p>
+                </Col>
+                <Col>
+                <p className="text-muted mb-0" style={{textAlign: 'right'}}>{props.siswa}</p>
+                </Col>
+              </Row>
               <Navbar.Brand style={{color: '#07A6A1'}} href="#harga1">{props.harga1}</Navbar.Brand>
             </Card.Body>
         </Card>
@@ -174,14 +183,19 @@ function PopularClasess(){
           <Card.Img variant="top" src={props.image1} />
             <Card.Body>
               <Card.Title>{props.title1}</Card.Title>
-              <p className="text-muted mb-0" style={{textAlign: 'left', width: '5rem'}}>{props.modul1}</p>
-              <p className="text-muted mb-0" style={{
-                textAlign: 'right', 
-                width: '6rem', 
-                marginLeft: '100px', 
-                marginBottom: '20px',
-                color: '#07a6a1'}}>{props.siswa1}</p>
-              <Navbar.Brand style={{color: '#07A6A1', marginBottom: '3rem'}} href="#harga2">{props.harga2}</Navbar.Brand>
+              <Row>
+                <Col>
+                  <p className="text-muted mb-0" style={{textAlign: 'left', width: '85%'}}>{props.modul1}</p>
+                </Col>
+                  <Col>
+                    <p className="text-muted mb-0" style={{
+                      textAlign: 'right',  
+                      color: '#07a6a1'}}>{props.siswa1}</p>
+                  </Col>
+              </Row>
+              <Navbar.Brand style={{
+                color: '#07A6A1', 
+                marginBottom: '3rem'}} href="#harga2">{props.harga2}</Navbar.Brand>
             </Card.Body>
         </Card>
       </div>
@@ -190,7 +204,7 @@ function PopularClasess(){
 
   return(
     <div className="kelas-popular">
-      <h3 className="font-weight-bold" style={{textAlign: 'center',  marginTop: '22rem'}}>KELAS ONLINE POPULER</h3>
+      <h3 className="font-weight-bold" style={{textAlign: 'center',  marginTop: '7rem'}}>KELAS ONLINE POPULER</h3>
     <Row>
       <Col>
         <KelasPopular
