@@ -281,7 +281,7 @@ function Benefit(){
       <div className="keuntungan-belajar col-12">
         <img src={props.image2} style={{textAlign: 'right', maxWidth: '100%', height: 'auto'}} />
         <h2 style={{fontWeight: 'bold', justifyContent: 'left'}}>{props.point1}</h2>
-        <p className="text-muted" style={{justifyContent: 'left'}}>{props.point2}</p>
+        <p className="text-muted" style={{justifyContent: 'right'}}>{props.point2}</p>
       </div>
    );
  }
@@ -322,20 +322,22 @@ function Benefit(){
 
 function Footer() {
   return(
-    <div className="space--sm border-top pb-4">
+    <div className="space--sm border-top pb-4" >
       <Row>
         <Col>
           <Row>
             &copy; 2018 CodePolitan. All rights reserved
           </Row>
         </Col>
+        <Row  style={{width: '20%'}}>
         <Col>
-          <FaFacebookF />
-          <FaInstagram />
-          <FaTwitter />
-          <FaLinkedinIn />
-          <FaYoutube />
+          <FaFacebookF style={{width: '20%'}} />
+          <FaInstagram  style={{width: '20%'}} />
+          <FaTwitter style={{width: '20%'}} />
+          <FaLinkedinIn style={{width: '20%'}} />
+          <FaYoutube style={{width: '20%'}} />
         </Col>
+        </Row>
       </Row>
     </div>
   );
